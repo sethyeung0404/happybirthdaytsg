@@ -40,11 +40,11 @@ export default class ReactCalendar extends React.Component {
       /*From Jun 1 & Summer*/
       this.props.bgIndexUpdate(3);
       console.log(this.props.bgIndex);
-    } else if (selectedMonth === 8 && selectedDate > 29) {
+    } else if (selectedMonth === 8 && selectedDate > 27) {
       /*From Sep 29 & Happy Birthday*/
       this.props.bgIndexUpdate(5);
       console.log(this.props.bgIndex);
-    } else if (selectedMonth === 8 && selectedDate > 1 && selectedDate < 28) {
+    } else if (selectedMonth === 8 && selectedDate < 28) {
       /*From Sep 1 & Mid Autumn*/
       this.props.bgIndexUpdate(4);
       console.log(this.props.bgIndex);
