@@ -37,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/sethyeung0404/happybirthdaytsg.git",
+  "author": "sethyeung0404 <62109034+sethyeung0404@users.noreply.github.com>",
+  "license": "MIT"
 }

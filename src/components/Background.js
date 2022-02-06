@@ -1,17 +1,40 @@
-import styled from 'styled-components';
-import background from '../img/background.jpeg';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import styled from "styled-components";
 
-const Background = styled.img`
-max-width: 100vw;
-height:100vh;
-`
+const Bg = styled.img`
+  max-width: 100vw;
+  height: 100vh;
+`;
 
-function App() {
+export default class Background extends React.Component {
+  backgroundSwitch = (bgIndex) => {
+    let index = bgIndex;
+
+    if (index === 0) {
+      return <Bg src={require("../img/0.jpeg")} />;
+    } else if (index === 1) {
+      return <Bg src={require("../img/1.PNG")} />;
+    } else if (index === 2) {
+      return <Bg src={require("../img/2.PNG")} />;
+    } else if (index === 3) {
+      return <Bg src={require("../img/3.PNG")} />;
+    } else if (index === 4) {
+      return <Bg src={require("../img/4.PNG")} />;
+    } else if (index === 5) {
+      return <Bg src={require("../img/5.PNG")} />;
+    } else if (index === 6) {
+      return <Bg src={require("../img/6.PNG")} />;
+    } else {
+      return <Bg src={require("../img/0.jpeg")} />;
+    }
+  };
+
+  render() {
     return (
-        <div>
-            <Background src={background} />
-        </div>
+      <>
+        <div>{this.backgroundSwitch(this.props.bgIndex)}</div>
+      </>
     );
+  }
 }
-
-export default App;
