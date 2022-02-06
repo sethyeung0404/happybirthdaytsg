@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import "antd/dist/antd.min.css";
 import { Calendar } from "antd";
 import moment from "moment";
