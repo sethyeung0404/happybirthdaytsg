@@ -52,6 +52,10 @@ export default class ReactCalendar extends React.Component {
       /*December & Merry Christmas*/
       this.props.bgIndexUpdate(6);
       console.log(this.props.bgIndex);
+    } else if (selectedMonth === 0) {
+      /*January & CNY*/
+      this.props.bgIndexUpdate(7);
+      console.log(this.props.bgIndex);
     } else {
       /*Everyting else */
       this.props.bgIndexUpdate(0);

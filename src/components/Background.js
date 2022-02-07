@@ -11,7 +11,7 @@ export default class Background extends React.Component {
     let index = bgIndex;
 
     if (index === 0) {
-      return <Bg src={require("../img/0.jpeg")} />;
+      return <Bg src={require("../img/0.PNG")} />;
     } else if (index === 1) {
       return <Bg src={require("../img/1.PNG")} />;
     } else if (index === 2) {
@@ -24,8 +24,10 @@ export default class Background extends React.Component {
       return <Bg src={require("../img/5.PNG")} />;
     } else if (index === 6) {
       return <Bg src={require("../img/6.PNG")} />;
+    } else if (index === 7) {
+      return <Bg src={require("../img/7.PNG")} />;
     } else {
-      return <Bg src={require("../img/0.jpeg")} />;
+      return <Bg src={require("../img/0.PNG")} />;
     }
   };
 
