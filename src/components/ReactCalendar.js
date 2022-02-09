@@ -32,7 +32,7 @@ export default class ReactCalendar extends React.Component {
       /*February & Valentines Day*/
       this.props.bgIndexUpdate(1);
       console.log(this.props.bgIndex);
-    } else if (selectedMonth === 2) {
+    } else if (selectedMonth === 2 || selectedMonth === 3) {
       /*March & Easter*/
       this.props.bgIndexUpdate(2);
       console.log(this.props.bgIndex);

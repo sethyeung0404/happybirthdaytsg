@@ -10,10 +10,10 @@ function Home() {
 
   return (
     <Row justify="space-around" align="middle">
-      <Col span={17}>
-        <Background bgIndex={bgIndex}  />
+      <Col xs={24} md={14} lg={17}>
+        <Background bgIndex={bgIndex} />
       </Col>
-      <Col span={7}>
+      <Col xs={18} md={10} lg={7}>
         <ReactCalendar bgIndex={bgIndex} bgIndexUpdate={setBgIndex} />
       </Col>
     </Row>
