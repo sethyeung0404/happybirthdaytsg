@@ -28,6 +28,8 @@ export default class Background extends React.Component {
       return <Bg src={require("../img/7.PNG")} />;
     } else if (index === 8) {
       return <Bg src={require("../img/8.PNG")} />;
+    } else if (index === 9) {
+      return <Bg src={require("../img/9.PNG")} />;
     } else {
       return <Bg src={require("../img/0.PNG")} />;
     }
