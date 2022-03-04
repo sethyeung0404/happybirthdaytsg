@@ -28,45 +28,29 @@ export default class ReactCalendar extends React.Component {
     let selectedDate = moment(value).date();
     let selectedMonth = moment(value).month();
 
+    /* Moment's Moneht counts from 0, January = 0, February = 1... */
     if (selectedMonth === 1) {
-      /*February & Valentines Day*/
-      this.props.bgIndexUpdate(1);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Love");
     } else if (selectedMonth === 2 || selectedMonth === 3) {
-      /*March & Easter*/
-      this.props.bgIndexUpdate(2);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Easter");
+    } else if (selectedMonth === 4) {
+      this.props.bgIndexUpdate("May");
     } else if (selectedMonth > 4 && selectedMonth < 8) {
-      /*From Jun 1 & Summer*/
-      this.props.bgIndexUpdate(3);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Summer");
     } else if (selectedMonth === 8 && selectedDate > 27) {
-      /*From Sep 29 & Happy Birthday*/
-      this.props.bgIndexUpdate(5);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Birthday");
     } else if (selectedMonth === 8 && selectedDate < 28) {
-      /*From Sep 1 & Mid Autumn*/
-      this.props.bgIndexUpdate(4);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Moon");
     } else if (selectedMonth === 11) {
-      /*December & Merry Christmas*/
-      this.props.bgIndexUpdate(6);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Christmas");
     } else if (selectedMonth === 0) {
-      /*January & CNY*/
-      this.props.bgIndexUpdate(7);
-      console.log(this.props.bgIndex);
-    } else if (selectedMonth === 9  && selectedDate < 15) {
-      /*January & CNY*/
-      this.props.bgIndexUpdate(8);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Normal");
+    } else if (selectedMonth === 9 && selectedDate < 15) {
+      this.props.bgIndexUpdate("China");
     } else if (selectedMonth === 9) {
-      /*January & CNY*/
-      this.props.bgIndexUpdate(9);
-      console.log(this.props.bgIndex);
+      this.props.bgIndexUpdate("Halloween");
     } else {
-      /*Everyting else */
-      this.props.bgIndexUpdate(0);
+      this.props.bgIndexUpdate("Normal");
       console.log(this.props.bgIndex);
     }
   };
@@ -77,6 +61,7 @@ export default class ReactCalendar extends React.Component {
 
   render() {
     const { value, selectedValue } = this.state;
+
     return (
       <>
         <div className="site-calendar-demo-card">

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import "antd/dist/antd.min.css";
 import Background from "../components/Background";
 import ReactCalendar from "../components/ReactCalendar";
 import { Row, Col } from "antd";
 
-function Home() {
-  const [bgIndex, setBgIndex] = useState();
+export default function Home() {
+  const [bgIndex, setBgIndex] = useState("");
 
   return (
     <Row justify="space-around" align="middle">
@@ -19,5 +18,3 @@ function Home() {
     </Row>
   );
 }
-
-export default Home;
