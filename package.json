@@ -3,16 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
     "antd": "^4.18.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "sass": "^1.47.0",
-    "styled-components": "^5.3.3",
-    "web-vitals": "^2.1.2"
+    "react-scripts": "5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,12 +14,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "main": "index.js",
+  "repository": "https://github.com/sethyeung0404/happybirthdaytsg.git",
+  "author": "sethyeung0404 <62109034+sethyeung0404@users.noreply.github.com>",
+  "license": "MIT",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -37,9 +29,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "main": "index.js",
-  "repository": "https://github.com/sethyeung0404/happybirthdaytsg.git",
-  "author": "sethyeung0404 <62109034+sethyeung0404@users.noreply.github.com>",
-  "license": "MIT"
+  }
 }

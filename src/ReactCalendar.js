@@ -1,12 +1,10 @@
 import React from "react";
-import "antd/dist/antd.min.css";
-import { Calendar } from "antd";
+import Calendar from "antd/lib/calendar";
 import moment from "moment";
 
 export default class ReactCalendar extends React.Component {
   state = {
     value: moment(),
-    selectedValue: moment(),
   };
 
   onChange = (value) => {
@@ -16,7 +14,6 @@ export default class ReactCalendar extends React.Component {
   onSelect = (value) => {
     this.setState({
       value,
-      selectedValue: value,
     });
   };
 
@@ -29,7 +26,9 @@ export default class ReactCalendar extends React.Component {
     let selectedMonth = moment(value).month();
 
     /* Moment's Moneht counts from 0, January = 0, February = 1... */
-    if (selectedMonth === 1) {
+    if (selectedMonth === 0) {
+      this.props.bgIndexUpdate("CNY");
+    } else if (selectedMonth === 1) {
       this.props.bgIndexUpdate("Love");
     } else if (selectedMonth === 2 || selectedMonth === 3) {
       this.props.bgIndexUpdate("Easter");
@@ -41,14 +40,14 @@ export default class ReactCalendar extends React.Component {
       this.props.bgIndexUpdate("Birthday");
     } else if (selectedMonth === 8 && selectedDate < 28) {
       this.props.bgIndexUpdate("Moon");
-    } else if (selectedMonth === 11) {
-      this.props.bgIndexUpdate("Christmas");
-    } else if (selectedMonth === 0) {
-      this.props.bgIndexUpdate("Normal");
     } else if (selectedMonth === 9 && selectedDate < 15) {
       this.props.bgIndexUpdate("China");
-    } else if (selectedMonth === 9) {
+    } else if (selectedMonth === 9 && selectedDate >= 15) {
       this.props.bgIndexUpdate("Halloween");
+    } else if (selectedMonth === 10 && selectedDate < 16) {
+      this.props.bgIndexUpdate("Halloween");
+    } else if (selectedMonth > 9) {
+      this.props.bgIndexUpdate("Christmas");
     } else {
       this.props.bgIndexUpdate("Normal");
       console.log(this.props.bgIndex);
@@ -60,7 +59,7 @@ export default class ReactCalendar extends React.Component {
   }
 
   render() {
-    const { value, selectedValue } = this.state;
+    const { value } = this.state;
 
     return (
       <>
